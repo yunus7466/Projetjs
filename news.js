@@ -14,14 +14,14 @@ function ajouter_recherche()
 }
 
 function supprimer_recherche(e)
-{ 
+{
 
 
 }
 
 
 function selectionner_recherche(e)
-{ 
+{
 
 }
 
@@ -34,37 +34,31 @@ function init()
 
 function rechercher_nouvelles()
 {
-	
-	
+  var result = document.getElementById('resultats');
+  result  = "";
+
+  var wai = document.getElementById('wait');
+  wai.removeAttribute("display");
+  wai.setAttribute("block","none");
+  
+  ajax_get_request(maj_resultats,"search.php?data=",true);
 }
 
 
 function maj_resultats(res)
 {
 
-	
+
 }
 
 
 function sauver_nouvelle(e)
 {
-	
+
 }
 
 
 function supprimer_nouvelle(e)
 {
-	
+
 }
-
-
-
-
-
-	
-
-
-
-
-
-
