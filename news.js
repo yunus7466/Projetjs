@@ -50,19 +50,18 @@ function rechercher_nouvelles()
             processData: false,
             contentType: false,
             data: $('#zone_saisie').value
-        }).maj_resultats(res) {          
-           document.getElementById('wait').setAttribute("display", "none");
-            res.forEach(function(r, i) {
-                blablabla url date titre
-            });
-        };
+        }).maj_resultats(res);
 }
 
 
 function maj_resultats(res)
 {
-
-
+           document.getElementById('wait').setAttribute("display", "none");
+            res.forEach(function(results, index) {
+                console.log(results);
+                // tu regardes ce que ça t'affiche dans la console et tu crées tes paragraphes <p> en fonction :)))
+                // blablabla url date titre
+            });
 }
 
 
