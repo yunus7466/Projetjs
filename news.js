@@ -38,14 +38,24 @@ function init()
 
 function rechercher_nouvelles()
 {
-  var result = document.getElementById('resultats');
-  result  = "";
+  document.getElementById('resultats').innerHTML ="";
 
-  var wai = document.getElementById('wait');
-  wai.removeAttribute("display");
-  wai.setAttribute("block","none");
+  document.getElementById('wait').setAttribute("display", "block");
   
   ajax_get_request(maj_resultats,"search.php?data=",true);
+
+        $.ajax({
+            method: "GET",
+            url: "/search.php",
+            processData: false,
+            contentType: false,
+            data: $('#zone_saisie').value
+        }).maj_resultats(res) {          
+           document.getElementById('wait').setAttribute("display", "none");
+            res.forEach(function(r, i) {
+                blablabla url date titre
+            });
+        };
 }
 
 
